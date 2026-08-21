@@ -1,4 +1,9 @@
-from metar import get_metar
+from metar import getMetar
+from metar import dumpsMetar
+from metar import formatMetar
 
-
-print(get_metar("KILN", 0))
+KILNdata = getMetar("KILN")
+formattedData = formatMetar(KILNdata)
+for field in formattedData:
+    print(formattedData.get(field))
+    print()
